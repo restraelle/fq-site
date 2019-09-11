@@ -1,0 +1,343 @@
+::-moz-selection {
+  background-color: rgba(152, 196, 153, 0.4);
+}
+
+::selection {
+  background-color: rgba(152, 196, 153, 0.4);
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navigation {
+  z-index: 1;
+}
+
+.nav-desktop {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.nav-desktop img {
+  height: 100%;
+  width: auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  height: 650px;
+  position: relative;
+  background-color: transparent;
+  background-image: url("/images/hero-bg.png");
+  background-position: center 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1000;
+  -webkit-filter: contrast(0.8) brightness(0.5) saturate(0.4) drop-shadow(0px 10px 17px rgba(0, 0, 0, 0.4));
+          filter: contrast(0.8) brightness(0.5) saturate(0.4) drop-shadow(0px 10px 17px rgba(0, 0, 0, 0.4));
+}
+
+.hero-text {
+  margin-top: 240px;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 20px 0px 0px 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+  color: white;
+}
+
+.nav-link {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 2px;
+  margin-right: 5px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: #98C499;
+  color: white;
+}
+
+.nav-link-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.social-links {
+  height: 100%;
+  line-height: 60px;
+}
+
+.social-links a {
+  font-size: 24px;
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: lightskyblue;
+}
+
+.screen-bound {
+  width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0px;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.section--invert {
+  background-color: #353d3b;
+  color: white;
+}
+
+.section-image {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+.section__type-1 {
+  -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+          clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+}
+
+.section__type-2 {
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+.overlap {
+  margin-top: -151px;
+  position: relative;
+}
+
+.section-text-invert {
+  color: white;
+}
+
+.section-comp-left {
+  width: 550px;
+  height: auto;
+  float: right;
+  padding: 35px 0px;
+}
+
+.section-comp-right {
+  width: 550px;
+  height: auto;
+  float: left;
+  padding: 35px 0px;
+}
+
+.section-image-right {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  -webkit-clip-path: polygon(11% 0, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(11% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.section-image-left {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  -webkit-clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
+}
+
+.content {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.partners {
+  margin: 0 auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.partners img {
+  height: 60px;
+  float: left;
+  -webkit-filter: saturate(0) brightness(0);
+          filter: saturate(0) brightness(0);
+  opacity: 0.4;
+  margin-left: 100px;
+}
+
+.partners img:nth-child(1) {
+  margin-left: 0px;
+}
+
+.contact-detail {
+  margin-bottom: 40px;
+  z-index: 2;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-right: 30px;
+  float: left;
+}
+
+.contact-icon:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-width: 2px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.contact-icon i {
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  top: 50%;
+  left: 50%;
+  font-size: 18px;
+}
+
+.points {
+  -webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+          clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.contact-form {
+  position: relative;
+  padding: 50px;
+  background-color: white;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contact-form input {
+  width: 100%;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.styled-title {
+  display: inline-block;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+}
+
+.contact-section {
+  background-image: url("/images/buildings.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.contact-section:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-filter: saturate(0);
+          filter: saturate(0);
+}
+
+.post {
+  width: 25%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+}
+
+.post__title {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.post__image {
+  width: 100%;
+  height: 170px;
+  border-radius: 4px;
+  background-color: #969696;
+}
+
+.footer {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer p {
+  margin: 10px 0px;
+  background-color: #646464;
+}
+/*# sourceMappingURL=main.css.map */
