@@ -48,7 +48,7 @@ body {
 }
 
 .background {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -72,12 +72,14 @@ body {
   margin: 20px 0px 0px 20px;
 }
 
-.nav-links li {
+.nav-link {
+  position: relative;
   display: inline-block;
   color: white;
 }
 
-.nav-link {
+.nav-link a {
+  position: relative;
   padding: 10px;
   text-decoration: none;
   color: white;
@@ -87,15 +89,115 @@ body {
   transition: all 0.2s;
 }
 
-.nav-link:hover {
+.nav-link:hover > a {
   background-color: #98C499;
   color: white;
+}
+
+.nav-link--level-icon:after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: '\f0da';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: #c8c8c8;
 }
 
 .nav-link-bg {
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+.nav-dropdown__1 {
+  position: absolute;
+  top: 31px;
+  left: 0px;
+  display: none;
+  width: 200px;
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-dropdown__1__link {
+  display: block;
+  position: relative;
+  color: black;
+  margin: 0;
+  padding: 10px;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -moz-user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-dropdown__1__link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.nav-dropdown__2 {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 200px;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  width: 200px;
+  list-style: none;
+  background-color: white;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e6e6e6;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-dropdown__2__link {
+  display: block;
+  color: black;
+  margin: 0;
+  padding: 10px;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -moz-user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-dropdown__2__link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.nav-link:hover > .nav-dropdown__1 {
+  display: block;
+  opacity: 1;
+}
+
+.nav-dropdown__1__link:hover > .nav-dropdown__2 {
+  display: block;
 }
 
 .social-links {
@@ -112,6 +214,18 @@ body {
 
 .social-links a:hover {
   color: lightskyblue;
+}
+
+.social-links--footer a {
+  color: inherit;
+}
+
+.social-links__email {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 2px;
 }
 
 .screen-bound {
@@ -198,14 +312,14 @@ body {
   margin: 0 auto;
 }
 
-.partners {
+.sites {
   margin: 0 auto;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
-.partners img {
+.sites img {
   height: 60px;
   float: left;
   -webkit-filter: saturate(0) brightness(0);
@@ -214,8 +328,38 @@ body {
   margin-left: 100px;
 }
 
-.partners img:nth-child(1) {
+.sites img:nth-child(1) {
   margin-left: 0px;
+}
+
+.sites__item {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin: 10px;
+  float: left;
+  width: 150px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sites__item i {
+  font-size: 64px;
+}
+
+.sites__item p {
+  margin: 10px 0px 0px 0px;
+}
+
+.sites__item:hover {
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
 }
 
 .contact-detail {
@@ -339,5 +483,9 @@ body {
 .footer p {
   margin: 10px 0px;
   background-color: #646464;
+}
+
+.footer-links a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
